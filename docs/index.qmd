@@ -1,0 +1,379 @@
+---
+title: "Desigualdade Racial na Educação"
+# title-slide-attributes:
+#     data-background-color: pink
+#     data-background-size: contain
+#     data-background-opacity: "0.5"
+
+#subtitle: "Usando **R** para Relatórios"
+author: " Dr. Gerrio Barbosa"
+institute: "[**Núcleo de Estudos Raciais (NERI) - Insper**](https://www.insper.edu.br/pesquisa-e-conhecimento/centro-de-gestao-e-politicas-publicas/nucleo-de-estudos-raciais/)"
+logo: logo_NERI.jpeg
+#footer: 
+  #text: "Núcleo de Estudos Raciais (NERI) - Insper"
+  #link: https://www.insper.edu.br/pesquisa-e-conhecimento/centro-de-gestao-e-politicas-publicas/nucleo-de-estudos-raciais/
+incremental: true
+execute:
+  echo: true
+format: 
+  revealjs:
+    css: [css_custom.css, custom_alternativo.scss]
+    #footer: "[**@gerriosantos**](https://twitter.com/home)"
+    chalkboard: true
+    #theme: serif
+    slide-tone: false
+    auto-animate: true
+    code-fold: show
+    code-summary: ">"
+    code-link: true
+editor: visual
+---
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.align='center', message=FALSE, warning=FALSE)
+```
+`
+
+#
+
+```{r, echo=FALSE}
+
+qrcode::qr_code('https://gerriosantos.github.io/presetation_race/#/title-slide') |> 
+  plot(col = c('white', '#800000'))
+
+```
+
+
+# Dia da Consciência Negra {.smaller}
+
+- Comemorada dia 20 de novembro em menção a morte de Zumbi dos Palmares.
+
+- Zumbi foi perseguido no final do século XVII por autoridades portuguesas.
+
+- [**Lei nº 10.639, de 09 de janeiro de 2003**](https://www.planalto.gov.br/ccivil_03/leis/2003/l10.639.htm) e [**Lei nº 11.645, de 10 março de 2008**](https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11645.htm)
+
+
+
+
+# Por que raça (ainda) importa? 
+
+
+
+# Discriminação Quantitativa {.smaller}
+
+- **Racismo Explícito**
+  - Proibição de casamento inter-raciais.
+  - Experimento das Bonecas.
+  - Associar cor ou raça a determinadas profissões.
+
+- **Racismo Implícito** 
+
+  - Segurança seguindo pessoa negra no shopping.
+  - Professor não gera expectativa com alunos negros.
+  - Como pessoas associam imagens de brancos e negros a conceitos como "dor", "alegria", "paz", etc. (Teste de Associação Implícita- IAT)
+
+
+
+# Discriminação Quantitativa {.smaller}
+
+- **Estudos de correspondência**
+
+  - Currículos com nomes de pessoas brancas e de negras.
+  
+
+
+# Discriminação Qualitativa {.smaller}
+
+
+- Questionários, entrevistas, observações de comportamento e análises textuais.
+
+- Pesquisas de ódio na internet.
+
+- _Menor escala_.
+
+- _Frágil do ponto de vista estatístico_.
+
+---
+
+
+```{r}
+
+knitr::include_graphics('figures/frase_pesquisa_qualitativa.png')
+
+```
+
+
+
+
+
+
+<!-- # Onde há racismo? -->
+
+<!--     - Mercado de Trabalho (Renda) -->
+<!--     - Saúde (Pandemia) -->
+<!--     - **Educação** -->
+<!--     - Violência -->
+<!--     - Política -->
+
+
+
+# Como surgiu? {.smaller}
+
+
+- Colonizações
+
+- Ponto de vista "biológico" ("há diferentes raças?")
+
+- Abolição sem um planejamento de alocação da população negra
+
+- "Mito da Democracia Racial"
+
+- Assassinato de George Floyd (Black Lives Matter)
+
+
+
+# Desigualdade / Discriminação {.smaller}
+
+- **Desigualdade** --- Refere-se ao acesso de oportunidades e recursos socialmente valorizados.
+
+
+- **Discrimanação** --- Relaciona-se com tratamento diferenciado devido a características como raça, gênero, etc.
+
+- **Preconceito/Estereótipos** --- Postura/Crença negativa contra grupos por cor/raça, gênero, etc.
+
+- **Racismo** --- Ideologia de superioridade ou dominação racial.
+
+
+
+# Como funciona a Classificação Racial? {.smaller}
+
+- Tipo de Classificação
+
+    - Identidade Racial, Autoclassificação, Raça Observada, Raça Refletida, Fenótipos, Ancestralidade.
+    
+
+- Fluidez Racial
+
+
+
+
+# Legislação Racista? {.smaller}
+
+- Lei Geral sobre ensino em 1827 criava escolas de primeiras letras em todo império.
+
+- Lei Municipal - São Leopoldo/RS em 22 de Dezembro de 1837 proibia escravos e pretos, mesmo que libertos, de frequentarem aulas públicas.
+
+- Em 1838, governo de Sergipe proíbe negros e portadores de doenças contagiosas de frequentarem escolas.
+
+- Lei nº 1.331, de 17 de Fevereiro de 1854, proibiu ingresso de escravos jovens na escola.
+
+- Lei nº 7.031-A, 06 de setembro de 1878 --- negros só poderiam estudar em cursos noturnos. 
+
+- Em 1893, Institutos de educação católicos em São Paulo regularam que para ter lugar gratuito ou meio pensionista deveriam não ser de cor preta.
+
+- Em 1899 surgem as primeiras Leis de obrigatoriedade do ensino fundamental, os negros e os índios não são contemplados.
+
+
+
+# Causas {.smaller}
+
+- História de segregação e Apartheid
+
+- _Background_ Familiar, Fatores Socioeconômicos, Regiões, etc.
+
+- Políticas educacionais e suas implicações
+
+    - Recursos e infraestrutura inadequada
+    
+    - Grade curricular, materais didáticos e práticas pedagógicas
+
+
+
+
+# Evidências
+
+
+# Taxas Líquidas de Matrículas
+
+---
+
+```{r}
+
+knitr::include_graphics('figures/tx_liq_matricula_pnad.png')
+
+```
+
+
+# Evolução dos Anos de Ensino
+---
+
+```{r}
+
+knitr::include_graphics('figures/graph_evol_pnad.png')
+
+```
+
+
+
+# Percentuais de Alunos Negros
+---
+
+```{r}
+
+knitr::include_graphics('figures/prop_pub_2021_9ef.png')
+
+```
+
+---
+
+```{r}
+
+knitr::include_graphics('figures/prop_pub_2021_3em.png')
+
+```
+
+
+# Cor/Raça e Gênero (5º ano do EF)
+
+```{r}
+
+knitr::include_graphics('figures/lp_mt_5ef_evol_notas.png')
+
+```
+
+
+
+# Cor/Raça e Gênero (9º ano do EF)
+
+```{r}
+
+knitr::include_graphics('figures/lp_mt_9ef_evol_notas.png')
+
+```
+
+# Cor/Raça (3º ano do EM)
+
+```{r}
+
+knitr::include_graphics('figures/notas_3ef_pub_priv.png')
+
+```
+
+
+
+
+# PNAD
+---
+
+```{r}
+
+knitr::include_graphics('figures/anos_estudos_pnad.png')
+
+```
+
+
+
+
+# Saeb
+---
+
+### 5º Ano do EF
+```{r}
+
+knitr::include_graphics('figures/5ef_desempenho_saeb.png')
+
+```
+---
+
+### 9º Ano do EF
+```{r}
+
+knitr::include_graphics('figures/9ef_desempenho_saeb.png')
+
+```
+
+---
+```{r}
+
+knitr::include_graphics('figures/3em_desempenho_saeb.png')
+
+```
+
+
+# ENEM
+---
+
+```{r}
+
+knitr::include_graphics('figures/nota_geral_enem_reg.png')
+
+```
+
+
+# Ação Afirmativa {.smaller}
+
+- Lei das Cotas ([Lei Nº 12.711, de 29 de Agosto de 2012.](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12711.htm))
+
+- Cotas e Bônus
+
+
+
+
+
+# Possíveis Soluções
+
+- Cotas
+
+- Indicadores de Equidade
+
+- Aplicação das [**Lei nº 10.639, de 09 de janeiro de 2003**](https://www.planalto.gov.br/ccivil_03/leis/2003/l10.639.htm) e [**Lei nº 11.645, de 10 março de 2008**](https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11645.htm)
+
+- Aspirações dos alunos
+
+- Menos rotatividade de professores
+
+---
+
+```{r, fig.align = 'center', out.width = '100%', out.height='100%'}
+
+knitr::include_graphics('figures/igualdade_equidade.png')
+
+```
+
+# Livro
+---
+
+```{r, fig.align = 'center'}
+
+knitr::include_graphics('figures/Capa e contracapa.png')
+
+```
+---
+
+```{r, fig.align = 'center'}
+
+knitr::include_graphics('figures/sumario_livro.png')
+
+```
+
+
+# Referências
+
+
+
+
+[Guia para realizar um bom diagnóstico de equidade racial](https://www.portaliede.com.br/wp-content/uploads/2023/11/Guia-para-realizar-um-bom-diagno%CC%81stico-de-equidade-racial_2023-1-1.pdf)
+
+
+---
+
+```{r, fig.align = 'center', out.width = '100%', out.height='100%'}
+
+knitr::include_graphics('figures/bye-bye.gif')
+
+```
+
+

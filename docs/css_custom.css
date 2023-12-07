@@ -1,0 +1,57 @@
+.reveal .slide-logo {
+  height: 80px !important;
+  width: 120px!important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
+
+/*.reveal .slide-logo {
+  display: block !important;
+  position: fixed !important;
+  top: 0 !important;
+  right: 10px !important;
+  max-height: 15% !important;
+  height: 100% !important;
+  width: auto !important;
+  color: $body-color !important;
+}*/
+
+.reveal .footer {
+    font-size: 0.3em !important;
+    margin: 0 !important;
+    color: Maroon !important;
+
+}
+
+
+.title {
+  /*font-size: 120px !important;*/
+  color: Maroon !important;
+}
+
+.quarto-title-author-name {
+  /*font-size: 100px;*/
+  color: Maroon !important;
+}
+
+.date {
+  /*font-size: 80px;*/
+  color: Maroon !important;
+}
+
+
+
+
+
+/*.footer {
+  font-family: $presentation-heading-font;
+  color: Maroon !important;
+}*/
+
+
+/* Titulos e Subtitulos */
+
+
+
+
+
