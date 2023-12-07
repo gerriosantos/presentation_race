@@ -41,7 +41,7 @@ knitr::opts_chunk$set(echo = FALSE, fig.align='center', message=FALSE, warning=F
 
 ```{r, echo=FALSE}
 
-qrcode::qr_code('https://gerriosantos.github.io/presetation_race/#/title-slide') |> 
+qrcode::qr_code('https://gerriosantos.github.io/presentation_race/#/title-slide') |> 
   plot(col = c('white', '#800000'))
 
 ```
